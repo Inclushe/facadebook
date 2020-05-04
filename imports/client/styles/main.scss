@@ -1,0 +1,135 @@
+$primaryColor: hsl(230deg, 80%, 50%);
+$primaryColorHover: hsl(225deg, 80%, 60%);
+$primaryTextColor: hsl(0deg, 0%, 5%);
+$secondaryTextColor: hsl(230deg, 10%, 35%);
+$shadow: 0 0rem 2rem hsla(0deg, 0%, 12%, 0.2), 0 0.25rem 0.5rem hsla(0deg, 0%, 12%, 0.3);
+
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: $primaryTextColor;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $primaryColor;
+  color: white;
+  padding: 0 1rem;
+  .logo {
+    margin-right: 1rem;
+    i {
+      font-size: 2rem;
+      font-weight: normal;
+    }
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+}
+
+main {
+  margin: 2rem auto;
+  max-width: 42rem;
+}
+
+.app-container {
+  display: flex;
+}
+
+.add-post-element {
+  margin-right: 4rem;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__textarea {
+    box-sizing: border-box;
+    width: 16rem;
+    height: 16rem;
+    padding: 1rem;
+    background: hsl(0deg, 0%, 92%);
+    border: 0.125rem solid white;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    font-family: inherit;
+    font-weight: inherit;
+    resize: none;
+  }
+  &__submit {
+    width: 8rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background: $primaryColor;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: $shadow;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 100ms;
+    &:hover {
+      background: $primaryColorHover;
+    }
+  }
+  &__submit-info {
+    margin: 0.5rem 0 0;
+    padding: 0;
+    font-size: 0.8rem;
+    color: $secondaryTextColor;
+  }
+}
+
+.post-list {
+  width: 100%;
+  &__placeholder {
+    text-align: center;
+    i {
+      font-size: 4rem;
+    }
+  }
+}
+
+.post {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: $shadow;
+  button {
+    margin-right: 0.5rem;
+    padding: 0rem 0.5rem;
+    border: 0.0625rem solid $secondaryTextColor;
+    border-radius: 0.5rem;
+    background: none;
+    line-height: 1.5rem;
+    cursor: pointer;
+    transition: background 100ms;
+    &:hover {
+      background: hsl(0deg, 0%, 82%);
+    }
+  }
+  &__content {
+    margin: 0 0 1rem;
+    padding: 0;
+  }
+  &__likes {
+    display: flex;
+    justify-content: space-between;
+    p {
+      margin: 0;
+      padding: 0;
+      line-height: 1.5rem;
+    }
+  }
+}
